@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import Menu from "./components/MenuComponent";
 import { DISHES } from "./shared/dishes";
 import Main from './components/MainComponent';
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -16,16 +17,11 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
       <div className="App">
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-          </div>
-        </Navbar>
-        <Menu dishes={this.state.dishes} />
-
-        <Main/>
+        <Main />
       </div>
+    </BrowserRouter>
     );
   }
 }
