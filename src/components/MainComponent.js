@@ -40,6 +40,14 @@ class Main extends Component {
 
     };
 
+    const DishWithId = () => {
+      const { dishId } = useParams();
+      return(
+          <DishDetail dish={this.state.dishes.filter((dish) => dish.id === parseInt(dishId,10))[0]} 
+            comments={this.state.comments.filter((comment) => comment.dishId === parseInt(dishId,10))} />
+      );
+    };
+
     return (
       <div>
 
@@ -52,6 +60,7 @@ class Main extends Component {
             Component={() => <Menu dishes={this.state.dishes} />} />
           <Route path="/" element={< Navigate to="/home" />} />
           <Route exact path='/contactus' component={Contact} />
+          <Route path='/menu/:dishId' component={DishWithId} />
         </Routes>
         <DishDetail
           dish={
