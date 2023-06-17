@@ -1,4 +1,3 @@
-import React from 'react';
 import React, { Component } from 'react';
 import {
     Breadcrumb, BreadcrumbItem,
@@ -159,8 +158,8 @@ class Contact extends Component {
                                             name="firstname"
                                             placeholder="First Name"
                                             value={this.state.firstname}
-                                            valid={errors.firstname === ""}
-                                            invalid={errors.firstname !== ""}
+                                            // valid={errors.firstname === ""}
+                                            // invalid={errors.firstname !== ""}
                                             onBlur={this.handleBlur("firstname")}
                                             onChange={this.handleInputChange}
                                         />
@@ -177,8 +176,8 @@ class Contact extends Component {
                                             name="lastname"
                                             placeholder="Last Name"
                                             value={this.state.lastname}
-                                            valid={errors.lastname === ""}
-                                            invalid={errors.lastname !== ""}
+                                            // valid={errors.lastname === ""}
+                                            // invalid={errors.lastname !== ""}
                                             onBlur={this.handleBlur("lastname")}
                                             onChange={this.handleInputChange}
                                         />
@@ -195,8 +194,8 @@ class Contact extends Component {
                                             name="telnum"
                                             placeholder="Tel. number"
                                             value={this.state.telnum}
-                                            valid={errors.telnum === ""}
-                                            invalid={errors.telnum !== ""}
+                                            // valid={errors.telnum === ""}
+                                            // invalid={errors.telnum !== ""}
                                             onBlur={this.handleBlur("telnum")}
                                             onChange={this.handleInputChange}
                                         />
@@ -236,8 +235,8 @@ class Contact extends Component {
                                             type="select"
                                             name="contactType"
                                             value={this.state.contactType}
-                                            valid={errors.email === ""}
-                                            invalid={errors.email !== ""}
+                                            // valid={errors.email === ""}
+                                            // invalid={errors.email !== ""}
                                             onBlur={this.handleBlur("email")}
                                             onChange={this.handleInputChange}
                                         >
