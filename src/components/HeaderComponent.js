@@ -35,11 +35,11 @@ class Header extends Component {
     this.toggleModal();
     alert(
       "Username: " +
-      this.username.value +
-      " Password: " +
-      this.password.value +
-      " Remember: " +
-      this.remember.checked
+        this.username.value +
+        " Password: " +
+        this.password.value +
+        " Remember: " +
+        this.remember.checked
     );
     event.preventDefault();
   }
@@ -67,7 +67,7 @@ class Header extends Component {
                 src="assets/images/logo.png"
                 height="35"
                 width="50"
-                alt="Food && Restaurent"
+                alt="Logo"
               />
             </NavbarBrand>
             <Collapse isOpen={this.state.isNavOpen} navbar>
@@ -145,7 +145,7 @@ class Header extends Component {
         <div className="container">
           <div className="row row-header justify-content-center">
             <div className="col-12 col-sm-6 p-4">
-              <h1>Ristorante con Fusion</h1>
+              <h1>Ristorante Con Fusion</h1>
               <p>
                 We take inspiration from the World's best cuisines, and create a
                 unique fusion experience. Our lipsmacking creations will tickle

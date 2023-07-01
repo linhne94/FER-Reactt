@@ -1,7 +1,6 @@
-export const DISHES =
-    [
-        {
-        id: 0,
+export const DISHES = [
+    {
+      id: 0,
         name:'Uthappizza',
         image: '/assets/images/uthappizza.png',
         category: 'mains',
@@ -39,5 +38,5 @@ export const DISHES =
         price:'2.99',
         featured: false,
         description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms'
-        }
-    ];
+        },
+  ];
