@@ -1,17 +1,21 @@
-import React from 'react';
+import React from "react";
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, Breadcrumb, BreadcrumbItem
-} from 'reactstrap';
-import { Link } from 'react-router-dom';
-
+    Card,
+    CardImg,
+    CardText,
+    CardBody,
+    CardTitle,
+    Breadcrumb,
+    BreadcrumbItem,
+} from "reactstrap";
+import { Link } from "react-router-dom";
 
 function RenderDish({ dish }) {
     if (dish == null) {
         return <div></div>;
     }
     return (
-        <div className="col-12 col-md-4">
+        <div className="col-12 col-md-12">
             <Card>
                 <CardImg width="100%" src={dish.image} alt={dish.name} />
                 <CardBody>
@@ -42,16 +46,25 @@ function RenderComments({ comments }) {
             </li>
         );
     });
-}
-const DishDetail = (props) => {
 
+    return (
+        <div className="col-12 col-md-12">
+            <h4> Comments </h4>
+            <ul className="list-unstyled">{showcmnts}</ul>
+        </div>
+    );
+}
+
+const DishDetail = (props) => {
+    // const dish = this.props.dish;
     if (props.dish != null)
         return (
             <div className="container">
                 <div className="row">
                     <Breadcrumb>
-
-                        <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
+                        <BreadcrumbItem>
+                            <Link to="/menu">Menu</Link>
+                        </BreadcrumbItem>
                         <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                     </Breadcrumb>
                     <div className="col-12">
@@ -69,6 +82,6 @@ const DishDetail = (props) => {
                 </div>
             </div>
         );
-}
+};
 
 export default DishDetail;
